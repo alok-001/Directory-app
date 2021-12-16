@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alok Directory App</title>
+</head>
+<body>
+    <h1 style="background: #4D72BE; text-align: center; color: white; margin: 0; padding: 10px;">Alok's Directory App</h1>
+    <div id="container">
+        <div id="add-ret-box">
+            <button onclick="addNew()">Add New Person</button>
+            <button onclick="retrieve()">Retrieve information</button>
+        </div>
+
+        <div id="directory">
+            <span id="funTab">Add New Person</span>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Date of birth</td>
+                    <td>Aadhaar Number</td>
+                    <td>Mobile Number</td>
+                    <td>Age</td>
+                    <td>Action</td>
+                </tr>
+               
+            </table>
+            <table id="table"></table>
+            <table>
+                <tr id="form1" style="display: none;">
+                   <form action="">
+                    <td><input type="text" id="name" placeholder="Enter name" required></td>
+                    <td><input type="Date" id="dob" placeholder="Enter Date" required></td>
+                    <td><input type="number" min="100000000000" max="99999999999" id="Aid" placeholder="Enter Aadhaar Number" required></td>
+                    <td><input type="number" min="1000000000" max="999999999" id="Mno" placeholder="Enter Mobile Number" required></td>
+                    <td id="age"> </td>
+                    <td><button type="submit" onclick="save()">Save </button>&nbsp; &nbsp;<button onclick="remove()">Delete </button></td>
+                   </form>
+                </tr>
+            </table>
+            <button id="add" onclick="add()">ADD</button>
+        </div>
+        <div id="directory-ret">
+            <span>Retrieve Information</span>
+                <input type="number" name="idN" id="idN" min="100000000000" max="99999999999" placeholder="Enter Aadhaar Number" type="text">
+                <button onclick="find()">Find</button>
+            <div id="result">
+                <ul id="show"></ul>
+                <h1 id="notfound" style="display: none; text-align: center;">NO DATA!!</h1>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
